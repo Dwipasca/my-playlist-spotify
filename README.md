@@ -10,7 +10,7 @@ This is the list challange, I want to challange :
 
 ## Features
 
-- [x] Have Page login for user to login in this app
+- [x] Page login, for user to login in this app
 
 ## How to run app
 
