@@ -12,7 +12,9 @@ describe("Login Page", () => {
 
     const heading1 = screen.getByText(/without music, life/i);
     const heading2 = screen.getByText(/would be a mistake/i);
-    const btnLogin = screen.getByRole("button", { name: "Please Login First" });
+    const btnLogin = screen.getByRole("button", {
+      name: /please login first/i,
+    });
 
     expect(heading1).toBeInTheDocument();
     expect(heading2).toBeInTheDocument();

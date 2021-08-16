@@ -7,10 +7,15 @@ The main problem in this app is how to create new playlist in spotify by using A
 This is the list challange, I want to challange :
 
 - [x] How to create connection to Api Spotify
+- [x] How to get accessToken from Api Soptify
+- [x] How to get userProfile from Api Spotify
 
 ## Features
 
-- [x] Page login, for user to login in this app
+- [x] Feature login, for user to login in this app with her/him account spotify
+- [] Feature search music, users can seach their music favorite
+- [] Feature create new playlist
+- [] Feature detail user profile
 
 ## How to run app
 
