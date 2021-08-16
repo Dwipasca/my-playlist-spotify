@@ -28,7 +28,7 @@ const Login = () => {
     if (isAuthenticated && user === null) {
       getProfile(accessToken).then((data) => {
         dispatch(storeUser(data));
-        // history.push("/create-playlist");
+        history.push("/create-playlist");
       });
     }
   }, [isAuthenticated, accessToken, user, history, dispatch]);
