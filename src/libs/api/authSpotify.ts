@@ -1,3 +1,5 @@
+import { UserProfile } from "types/spotify";
+
 const CLIENT_ID = process.env.REACT_APP_SPOTIFY_ID;
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 const REDIRECT_URL_AFTER_LOGIN = process.env.REACT_APP_BASE_URL;
@@ -10,7 +12,7 @@ const loginAuthorizeSpotify = (): void => {
   );
 };
 
-const getProfile = (accessToken: string) => {
+const getProfile = (accessToken: string): Promise<UserProfile> => {
   return fetch(`${SPOTIFY_ENDPOINT}/me`, {
     headers: {
       Authorization: "Bearer " + accessToken,
@@ -18,4 +20,15 @@ const getProfile = (accessToken: string) => {
   }).then((res) => res.json());
 };
 
-export { loginAuthorizeSpotify, getProfile };
+const getAccessTokenFromURL = (hash: string) => {
+  const stringAfterHastag = hash.substring(1);
+  const paramInUrl = stringAfterHastag.split("&");
+  const paramSplitUp = paramInUrl.reduce((acc: any, currentValue: string) => {
+    const [key, value] = currentValue.split("=");
+    acc[key] = value;
+    return acc;
+  }, {});
+  return paramSplitUp;
+};
+
+export { loginAuthorizeSpotify, getProfile, getAccessTokenFromURL };

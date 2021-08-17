@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IPlaylistState } from "../types/store";
+
+import { IPlaylistState } from "types/store";
 
 const initialState: IPlaylistState = {
   tracks: [],

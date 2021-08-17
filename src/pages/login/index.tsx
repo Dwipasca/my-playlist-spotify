@@ -4,34 +4,29 @@ import { Flex, Heading, Button } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 
 // ? function
-import { loginAuthorizeSpotify, getProfile } from "libs/api/authSpotify";
-import { useAppSelector, useAppDispatch } from "store";
-import { login, storeUser } from "store/auth";
+import {
+  loginAuthorizeSpotify,
+  getProfile,
+  getAccessTokenFromURL,
+} from "libs/api/authSpotify";
+import { useAppDispatch } from "store";
+import { login, storeUser } from "store/authSlice";
 
 // ? style module css
 import style from "./login.module.css";
 
 const Login = () => {
-  const { isAuthenticated, accessToken, user } = useAppSelector(
-    (state) => state.auth
-  );
+  let history = useHistory();
   const dispatch = useAppDispatch();
-  const history = useHistory();
+
   useEffect(() => {
-    if (!isAuthenticated && window.location.hash) {
-      const params: string[] = window.location.hash.substr(1).split("&");
-      params.forEach((param: string) => {
-        const [key, value]: string[] = param.split("=");
-        if (key === "access_token") dispatch(login(value));
-      });
+    if (window.location.hash) {
+      const { access_token } = getAccessTokenFromURL(window.location.hash);
+      dispatch(login(access_token));
+      getProfile(access_token).then((data) => dispatch(storeUser(data)));
+      history.push("/create-playlist");
     }
-    if (isAuthenticated && user === null) {
-      getProfile(accessToken).then((data) => {
-        dispatch(storeUser(data));
-        history.push("/create-playlist");
-      });
-    }
-  }, [isAuthenticated, accessToken, user, history, dispatch]);
+  }, [dispatch, history]);
 
   return (
     <Flex
