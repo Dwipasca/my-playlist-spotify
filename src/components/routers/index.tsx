@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 
 // ? lib third party
-import { useAppSelector } from "store";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +8,10 @@ import {
   Redirect,
 } from "react-router-dom";
 
-// ? components
+// ? redux
+import { useAppSelector } from "store/index";
+
+// ?components
 import Login from "pages/login";
 import PrivateRoute from "./privateRouter";
 import { Routers } from "./root.routers";
