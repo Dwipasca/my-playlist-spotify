@@ -1,6 +1,11 @@
-import Navbar from "components/navbar";
+// ? lib thrid party
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
+
+// ? components
+import Navbar from "components/navbar";
+
+// ? redux
 import { useAppSelector } from "store/index";
 
 const PrivateRoute = ({ ...routerProps }) => {

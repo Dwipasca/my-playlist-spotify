@@ -1,6 +1,5 @@
-import React, { Suspense } from "react";
-
 // ? lib third party
+import React, { Suspense } from "react";
 import {
   BrowserRouter as Router,
   Switch,
