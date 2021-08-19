@@ -14,16 +14,19 @@ This is the list challange, I want to challange :
 ## Features
 
 - [x] Feature login, for user to login in this app with her/him account developers spotify
-- [] Feature search music, users can seach their music favorite
-- [] Feature create new playlist
+- [x] Feature search music, users can seach their music favorite
+- [x] Feature create new playlist
 - [] Feature detail user profile
+- [x] Switch Theme Light or Dark
 
 ## Depedencies I use
 
 - [x] React-router-dom
-- [x] Typescript
+- [x] Write in Typescript
 - [x] Chakra UI
-- [x] React-redux and Redux-toolkit
+- [x] React-redux
+- [x] Redux-toolkit
+- [x] React-hook-form
 
 ## How to setup App after clone profject from github
 
@@ -33,6 +36,12 @@ This is the list challange, I want to challange :
 ```
     REACT_APP_SPOTIFY_ID = {Your client id in acount developer spotify}
     REACT_APP_BASE_URL = {http://localhost:3000/}
+```
+
+- In your terminal type this code below
+
+```
+    yarn or yarn install
 ```
 
 ## How to run app

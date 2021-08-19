@@ -5,10 +5,6 @@ import { IPlaylistState } from "types/store";
 const initialState: IPlaylistState = {
   tracks: [],
   selectedTracks: [],
-  form: {
-    title: "",
-    description: "",
-  },
 };
 
 const playlistSlice = createSlice({
@@ -25,15 +21,6 @@ const playlistSlice = createSlice({
       const index = state.selectedTracks.indexOf(action.payload);
       state.selectedTracks.splice(index, 1);
     },
-    setFormTitle: (state, action) => {
-      state.form.title = action.payload;
-    },
-    setFormDescription: (state, action) => {
-      state.form.description = action.payload;
-    },
-    clearForm: (state) => {
-      state.form = initialState.form;
-    },
     clearSelectedTracks: (state) => {
       state.selectedTracks = [];
     },
@@ -46,8 +33,6 @@ export const {
   addSelectedTracks,
   substractSelectedTracks,
   clearSelectedTracks,
-  setFormTitle,
-  setFormDescription,
   clearState,
 } = playlistSlice.actions;
 

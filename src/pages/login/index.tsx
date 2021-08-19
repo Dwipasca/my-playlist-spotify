@@ -3,12 +3,14 @@ import React, { useEffect } from "react";
 import { Flex, Heading, Button } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 
-// ? function
+// ? api
 import {
   loginAuthorizeSpotify,
   getProfile,
   getAccessTokenFromURL,
 } from "libs/api/authSpotify";
+
+// ? redux
 import { useAppDispatch } from "store";
 import { login, storeUser } from "store/authSlice";
 
@@ -34,6 +36,7 @@ const Login = () => {
       className={style["login-background"]}
       h="100vh"
       alignItems="center"
+      justifyContent="center"
     >
       <Heading
         as="h1"
@@ -42,7 +45,6 @@ const Login = () => {
         borderRadius="10px"
         p="20px"
         color="white"
-        mt="180px"
         mb="25px"
         lineHeight="60px"
       >
