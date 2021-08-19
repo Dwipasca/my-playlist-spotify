@@ -10,7 +10,13 @@ import { getSearchTracks } from "libs/api/apiSpotify";
 import { useAppSelector, useAppDispatch } from "store";
 import { setTracks } from "store/playlistSlice";
 
-const SearchBar = ({ setIsLoading, search, setSearch }) => {
+type SearchBarType = {
+  setIsLoading: (query: boolean) => void;
+  search: string;
+  setSearch: (query: string) => void;
+};
+
+const SearchBar = ({ setIsLoading, search, setSearch }: SearchBarType) => {
   const dispatch = useAppDispatch();
   const token = useAppSelector((state) => state.auth.accessToken);
 
@@ -34,7 +40,7 @@ const SearchBar = ({ setIsLoading, search, setSearch }) => {
           type="text"
           id="input-search "
           name="input-search"
-          placeholder="Search.."
+          placeholder="Search music.."
           autoComplete="off"
           onChange={(e) => setSearch(e.target.value)}
           value={search}
