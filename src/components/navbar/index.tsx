@@ -38,6 +38,10 @@ const Navbar = () => {
     history.push("/");
   };
 
+  const handleProfileClick = () => {
+    window.open(user?.external_urls.spotify);
+  };
+
   return (
     <Flex
       h="70px"
@@ -67,7 +71,9 @@ const Navbar = () => {
             </Flex>
           </MenuButton>
           <MenuList>
-            <MenuItem icon={<FaUserAlt />}>Profile</MenuItem>
+            <MenuItem icon={<FaUserAlt />} onClick={handleProfileClick}>
+              Profile
+            </MenuItem>
             <ColorModeSwitcher />
             <MenuItem icon={<FaSignOutAlt />} onClick={handleLogoutClick}>
               Logout
