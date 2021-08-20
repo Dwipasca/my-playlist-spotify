@@ -1,12 +1,10 @@
 import React from "react";
-
 import { render, screen, cleanup } from "@testing-library/react";
-// import { Button } from "@chakra-ui/button";
-// import userEvent from "@testing-library/user-event";
-
 import { Provider } from "react-redux";
-import store from "store";
 
+// ? redux
+import store from "store";
+// ? components
 import Login from "./index";
 
 describe("Login Page", () => {
@@ -33,13 +31,4 @@ describe("Login Page", () => {
 
     // screen.debug();
   });
-
-  // it("Method in button login can run successfully", async () => {
-  //   const loginAuthorizeSpotify = jest.fn();
-  //   render(<Button onClick={loginAuthorizeSpotify} />);
-  //   const btnLogin = screen.getByText("PLEASE LOGIN FIRST");
-  //   userEvent.click(btnLogin);
-  //   expect(loginAuthorizeSpotify).toHaveBeenCalledTimes(1);
-  //   screen.debug();
-  // });
 });

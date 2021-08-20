@@ -7,7 +7,7 @@ import { FaPlus } from "react-icons/fa";
 import { useAppSelector } from "store";
 
 // ? components
-import ModalCreatePlaylist from "components/modal";
+import ModalCreatePlaylist from "components/modalCreatePlaylist";
 import TrackList from "components/trackList";
 import SearchBar from "components/searchBar";
 import TrackItemSkeleton from "components/trackItemSkeleton";

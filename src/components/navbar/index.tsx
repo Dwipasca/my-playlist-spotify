@@ -31,7 +31,7 @@ const Navbar = () => {
   const user = useAppSelector((state) => state.auth.user);
   const navbarStyle = useColorModeValue("yellow.400", "gray.900");
 
-  console.log(user);
+  // console.log(user);
 
   const handleLogoutClick = () => {
     dispatch(logout());

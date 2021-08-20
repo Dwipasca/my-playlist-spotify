@@ -16,10 +16,11 @@ This is the list challange, I want to challange :
 ## Features
 
 - [x] Feature login, for user to login in this app with her/him account developers spotify
-- [x] Feature search music, users can seach their music favorite
+- [x] Feature search music, users can search their music favorite
 - [x] Feature create new playlist
 - [x] Feature link show user profile
 - [x] Switch Theme Light or Dark
+- [x] Testing with react-testing library, jest and MSW
 
 ## Depedencies I use
 
@@ -29,6 +30,7 @@ This is the list challange, I want to challange :
 - [x] React-redux
 - [x] Redux-toolkit
 - [x] React-hook-form
+- [x] MSW
 
 ## How to setup App after clone profject from github
 
@@ -37,6 +39,10 @@ This is the list challange, I want to challange :
 
 ```
     REACT_APP_SPOTIFY_ID = {Your client id in acount developer spotify}
+
+```
+
+```
     REACT_APP_BASE_URL = {http://localhost:3000/}
 ```
 
