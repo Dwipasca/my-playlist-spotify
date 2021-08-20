@@ -16,7 +16,7 @@ import TrackItem from "./trackItem";
 
 const TrackList = ({ tracks }) => {
   return (
-    <Flex flexDir="column" pl="20" pr="20">
+    <Flex flexDir="column" pl="20" pr="20" w="full">
       <Table variant="simple" size="sm">
         <TableCaption>List Music</TableCaption>
         <Thead>
