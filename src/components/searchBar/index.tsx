@@ -34,7 +34,7 @@ const SearchBar = ({ setIsLoading, search, setSearch }: SearchBarType) => {
   };
 
   return (
-    <Flex alignItems="center" w="80%">
+    <Flex alignItems="center" w="full" mr={10}>
       <FormControl mr={5}>
         <Input
           type="text"
@@ -47,6 +47,7 @@ const SearchBar = ({ setIsLoading, search, setSearch }: SearchBarType) => {
         />
       </FormControl>
       <Button
+        w="150px"
         leftIcon={<FaSearch />}
         colorScheme="yellow"
         variant="solid"

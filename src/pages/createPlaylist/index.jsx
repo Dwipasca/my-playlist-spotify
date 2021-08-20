@@ -23,7 +23,7 @@ const CreatePlaylist = () => {
 
   return (
     <div>
-      <Flex minH="90vh" flexDir="column">
+      <Flex minH="90vh" flexDir="column" alignItems={["center", "flex-start"]}>
         <Heading as="h2" size="md" mt={5} ml={5}>
           Create Playlist
         </Heading>
@@ -31,10 +31,10 @@ const CreatePlaylist = () => {
           p={5}
           w="100%"
           justifyContent="space-between"
-          alignItems="center"
           boxShadow="md"
           mb={10}
-          position="sticky"
+          direction={["column", "row"]}
+          alignItems={["flex-start", "center"]}
         >
           <SearchBar
             setIsLoading={setIsLoading}
@@ -42,7 +42,11 @@ const CreatePlaylist = () => {
             setSearch={setSearch}
           />
 
-          <Flex>
+          <Flex
+            direction={["column", "row"]}
+            alignItems={["flex-start", "center"]}
+            mt={[5, 0]}
+          >
             <Button
               leftIcon={<FaPlus />}
               onClick={onOpen}

@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <Flex
       h="70px"
-      w="100vw"
+      w="full"
       p="20px"
       bgColor={navbarStyle}
       justifyContent="space-between"
