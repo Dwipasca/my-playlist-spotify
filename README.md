@@ -10,13 +10,15 @@ This is the list challange, I want to challange :
 - [x] How to get accessToken from Api Soptify
 - [x] How to get userProfile from Api Spotify
 - [x] How to create flexible routers
+- [x] How to search music
+- [x] How to create new playlist after selected our favorite music
 
 ## Features
 
 - [x] Feature login, for user to login in this app with her/him account developers spotify
 - [x] Feature search music, users can seach their music favorite
 - [x] Feature create new playlist
-- [] Feature detail user profile
+- [x] Feature link show user profile
 - [x] Switch Theme Light or Dark
 
 ## Depedencies I use
