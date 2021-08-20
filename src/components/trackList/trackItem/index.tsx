@@ -64,8 +64,12 @@ const TrackItem = ({ track, id }: TrackType) => {
         <Img src={track.album.images[2]?.url} boxSize="60px" />
       </Td>
       <Td>
-        <Text fontWeight="bold">{track.name}</Text>
-        <Text as="sub">{track.artists[0]?.name}</Text>
+        <Text fontWeight="bold" data-testid="track-name">
+          {track.name}
+        </Text>
+        <Text as="sub" data-testid="track-artist">
+          {track.artists[0]?.name}
+        </Text>
       </Td>
       <Td>{track.album.name}</Td>
       <Td>{track.album.release_date}</Td>
