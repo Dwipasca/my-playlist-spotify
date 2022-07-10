@@ -1,70 +1,57 @@
-## Problem
+# My Playlist Spotify
 
-```
-The main problem in this app is how to create new playlist in spotify by using API Spotify.
-```
+## Screenshoot
+<img width="595" alt="Screen Shot 2022-07-11 at 07 52 05" src="https://user-images.githubusercontent.com/19584291/178166837-32ee4266-a80c-4e4d-964a-af3610aa339f.png">
+<img width="602" alt="Screen Shot 2022-07-11 at 07 53 26" src="https://user-images.githubusercontent.com/19584291/178166859-13394699-35ff-4a5a-a40c-7d711d91d166.png">
+<img width="597" alt="Screen Shot 2022-07-11 at 07 54 34" src="https://user-images.githubusercontent.com/19584291/178166906-e4fc3e8c-8022-4a74-af33-b100722127df.png">
 
-This is the list challange, I want to challange :
-
-- [x] How to create connection to Api Spotify
-- [x] How to get accessToken from Api Soptify
-- [x] How to get userProfile from Api Spotify
-- [x] How to create flexible routers
-- [x] How to search music
-- [x] How to create new playlist after selected our favorite music
+## Videos
+https://www.instagram.com/p/CSyeF-XHFtNG-rD4787GCUlEyWwUH5UpBTktTo0/
 
 ## Features
 
-- [x] Feature login, for user to login in this app with her/him account developers spotify
-- [x] Feature search music, users can search their music favorite
-- [x] Feature create new playlist
-- [x] Feature link show user profile
-- [x] Switch Theme Light or Dark
-- [x] Testing with react-testing library, jest and MSW
+- [x] Login, for user to login in this app with her/him account developers spotify
+- [x] Search music, users can search their music favorite
+- [x] Create a new playlist
+- [x] link direct show user profile
+- [x] Switch theme Light or Dark
 
-## Depedencies I use
+## Depp or Lib I use
+- Node versi 14
+- React
+- React-router-dom
+- Typescript
+- Chakra UI
+- React-redux
+- Redux-toolkit
+- React-hook-form
+- MSW (Mocking Service Worker)
 
-- [x] React-router-dom
-- [x] Write in Typescript
-- [x] Chakra UI
-- [x] React-redux
-- [x] Redux-toolkit
-- [x] React-hook-form
-- [x] MSW
-
-## How to setup App after clone profject from github
-
-- Create your `.env.local` file to match `.enc.example` file.
-- Update your `.env.local` file as your local configs :
+## How to use
+- clone this repo
+```
+    git clone git@github.com:Dwipasca/my-playlist-spotify.git
+```
+- 
+- create your `.env.local` file to match `.enc.example` file.
+- update your `.env.local` file as your local configs :
 
 ```
     REACT_APP_SPOTIFY_ID = {Your client id in acount developer spotify}
-
-```
-
-```
     REACT_APP_BASE_URL = {http://localhost:3000/}
-```
 
-- In your terminal type this code below
+```
+- install depp
 
 ```
     yarn or yarn install
 ```
+- run project
+```
+    yarn start
+```
+- run test
+```
+    yarn test
+```
 
-## How to run app
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br /> See the section
-about
